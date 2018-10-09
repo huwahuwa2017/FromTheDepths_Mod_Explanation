@@ -1,1 +1,1 @@
-# FromTheDepthsのMod作成解説
+# FromTheDepthsのMod作成で使うクラスやメソッドの解説
