@@ -1,91 +1,94 @@
-�`SetExtraInfo�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～SetExtraInfo～
+　「ブロックのデータ保存解説」へ
 
-�`GetExtraInfo�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～GetExtraInfo～
+　「ブロックのデータ保存解説」へ
 
-�`SetText�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～SetText～
+　「ブロックのデータ保存解説」へ
 
-�`GetText�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～GetText～
+　「ブロックのデータ保存解説」へ
 
-�`SetParameters1�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～SetParameters1～
+　「ブロックのデータ保存解説」へ
 
-�`GetParameters1�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～GetParameters1～
+　「ブロックのデータ保存解説」へ
 
-�`SetParameters2�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～SetParameters2～
+　「ブロックのデータ保存解説」へ
 
-�`GetParameters2�`
-�@�u�u���b�N�̃f�[�^�ۑ�����v��
+～GetParameters2～
+　「ブロックのデータ保存解説」へ
 
-�`BlockStart�`
-�@�u���b�N�ݒu�A�r�[�N�����[�h�ň�ԍŏ��Ɏ��s�����B
+～BlockStart～
+　ブロック設置、ビークルロードで一番最初に実行される。
 
-�`StateChanged�`
-�@�u���b�N�̐ݒu�A�P���A�_���[�W�A�C���ȂǂŎ��s�����B
-�@������IBlockStateChange����A�ǂ̏����Ŏ��s���ꂽ�̂����킩��B
+～StateChanged～
+　ブロックの設置、撤去、ダメージ、修理などで実行される。
+　引数のIBlockStateChangeから、どの条件で実行されたのかがわかる。
 
-�@���u���b�N�P���F�r���h���[�h�Ńu���b�N��P�����邱�ƁB
-�@�@�u���b�N�j��F�_���[�W���󂯂ău���b�N���E�����邱�ƁB
+　※ブロック撤去：ビルドモードでブロックを撤去すること。
+　　ブロック破壊：ダメージを受けてブロックが脱落すること。
 
-�@�EIBlockStateChange.IsAvailableToConstruct
-�@�@�u���b�N�ݒu�E���̉��E�u���b�N�C����True��Ԃ��B
+　・IBlockStateChange.IsAvailableToConstruct
+　　ブロック設置・実体化・ブロック修理でTrueを返す。
 
-�@�EIBlockStateChange.InitiatedOrInitiatedInUnrepairedState_OnlyCalledOnce
-�@�@�u���b�N�ݒu�E���̉���True��Ԃ��B
+　・IBlockStateChange.InitiatedOrInitiatedInUnrepairedState_OnlyCalledOnce
+　　ブロック設置・実体化でTrueを返す。
 
-�@�EIBlockStateChange.IsRepaired
-�@�@�u���b�N�C����True��Ԃ��B
+　・IBlockStateChange.IsRepaired
+　　ブロック修理でTrueを返す。
 
-�@�EIBlockStateChange.IsLostToConstructOrConstructLost
-�@�@�u���b�N�P���E����̉��E�u���b�N�j���True��Ԃ��B
+　・IBlockStateChange.IsLostToConstructOrConstructLost
+　　ブロック撤去・非実体化・ブロック破壊でTrueを返す。
 
-�@�EIBlockStateChange.IsPerminentlyRemovedOrConstructDestroyed
-�@�@�u���b�N�P���E����̉���True��Ԃ��B
+　・IBlockStateChange.IsPerminentlyRemovedOrConstructDestroyed
+　　ブロック撤去・非実体化でTrueを返す。
 
-�@�EIBlockStateChange.IsPerminentlyRemovedfromDesign
-�@�@�u���b�N�P����True��Ԃ��B
+　・IBlockStateChange.IsPerminentlyRemovedfromDesign
+　　ブロック撤去でTrueを返す。
 
-�@�EIBlockStateChange.Killed
-�@�@�u���b�N�j���True��Ԃ��B
+　・IBlockStateChange.Killed
+　　ブロック破壊でTrueを返す。
 
-�@�EIBlockStateChange.HasTakenSomeDamage
-�@�@�_���[�W���󂯂�����True��Ԃ��B
+　・IBlockStateChange.HasTakenSomeDamage
+　　ダメージを受けた時にTrueを返す。
 
-�`FinalOptionalInitialisationStage�`
-�@�r�[�N���̃��[�h���ɁASetExtraInfo��SetText�̌�Ɏ��s�����B
+～PlacedAsPrefab～
+　プレハブでブロックを設置した時に実行される。
 
-�`StuffChangedSyncIt�`
-�@�u���b�N�̃f�[�^�̃y�[�X�g��A�v���n�u�ł̃u���b�N�ݒu���ɁA
-�@SetExtraInfo��SetText�̌�Ɏ��s�����B
+～FinalOptionalInitialisationStage～
+　ビークルのロード時に、SetExtraInfoやSetTextの後に実行される。
 
-�`CheckStatus�`
-�@0.5�b��1�b���Y�ꂽ���ǈ�莞�Ԃ��ƂɎ��s�����B
-�@������IStatusUpdate����A�r���h���[�h�Ȃ̂��ǂ������킩��B
-�@
-�@�EIStatusUpdate.IsBuildMode
-�@�@�u���b�N���ݒu����Ă���r�[�N�����r���h���[�h�̏ꍇTrue��Ԃ��B
+～StuffChangedSyncIt～
+　ブロックのデータのペーストや、プレハブでのブロック設置時に、
+　SetExtraInfoやSetTextの後に実行される。
 
-�`Secondary�`
-�@�u���b�N��GUI�֌W�Ŋ��􂷂�B
-�@�������O�̃��\�b�h��������āA���ꂼ��g�������傫���قȂ�B
+～CheckStatus～
+　0.5秒か1秒か忘れたけど一定時間ごとに実行される。
+　引数のIStatusUpdateから、ビルドモードなのかどうかがわかる。
+　
+　・IStatusUpdate.IsBuildMode
+　　ブロックが設置されているビークルがビルドモードの場合Trueを返す。
 
-�@�EInteractionReturn Secondary()
-�@�@�u���b�N�ɃJ�[�\�������킹�����Ɏ��s�����B
-�@�@�u���b�N�̖��O�Ƃ��X�e�[�^�X�\���p�B
+～Secondary～
+　ブロックのGUI関係で活躍する。
+　同じ名前のメソッドが二つあって、それぞれ使い方が大きく異なる。
 
-�@�Evoid Secondary(Transform T)
-�@�@�u���b�N�ɃJ�[�\�������킹��Q�L�[�����������Ɏ��s�����B
-�@�@new GenericBlockGUI().ActivateGui(this, GuiActivateType.Standard);
-�@�@�������Ēu����ExtraGUI�����s���Ă����B�i���K���j
+　・InteractionReturn Secondary()
+　　ブロックにカーソルを合わせた時に実行される。
+　　ブロックの名前とかステータス表示用。
 
-�`ExtraGUI�`
-�@�u���b�N��GUI�̏������R�R�ɏ������ށB
-�@return��True��Ԃ���GUI���J���Ă����Ԃ����������B
+　・void Secondary(Transform T)
+　　ブロックにカーソルを合わせてQキーを押した時に実行される。
+　　new GenericBlockGUI().ActivateGui(this, GuiActivateType.Standard);
+　　を書いて置けばExtraGUIを実行してくれる。（超適当）
+
+～ExtraGUI～
+　ブロックのGUIの処理をココに書き込む。
+　returnにTrueを返すとGUIを開いている状態が解除される。
 
 
 
