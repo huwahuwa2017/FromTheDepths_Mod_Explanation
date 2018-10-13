@@ -90,6 +90,7 @@
 　ブロックのGUIの処理をココに書き込む。
 　returnにTrueを返すとGUIを開いている状態が解除される。
 
-
+～ExtraGUIClosed～
+　ExtraGUIを閉じた時に実行される。
 
 
