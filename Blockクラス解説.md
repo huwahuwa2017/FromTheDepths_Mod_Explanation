@@ -1,10 +1,10 @@
-・public int MainUID
-　ブロックを設置するたびに生成するID。
-　Mod作成時のブロックの編集でIDを作成するかしないかを選べる？
+・public int MainUID  
+　ブロックを設置するたびに生成するID。  
+　Mod作成時のブロックの編集でIDを作成するかしないかを選べる？  
 
-・public IMainConstructBlock MainConstruct
-　IMainConstructBlockを取得する。
-　IMainConstructBlockには、ビークルの色々な情報が入っている。
+・public IMainConstructBlock MainConstruct  
+　IMainConstructBlockを取得する。  
+　IMainConstructBlockには、ビークルの色々な情報が入っている。  
 
 ・public IAllConstructBlock ParentConstruct
 　IMainConstructBlockの基底クラスであるIAllConstructBlockを取得する。（要検証）
