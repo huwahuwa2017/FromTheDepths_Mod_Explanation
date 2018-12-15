@@ -69,7 +69,7 @@
 ～CheckStatus～  
 　0.5秒か1秒か忘れたけど一定時間ごとに実行される。  
 　引数のIStatusUpdateから、ビルドモードなのかどうかがわかる。  
-　
+ 
 　・IStatusUpdate.IsBuildMode  
 　　ブロックが設置されているビークルがビルドモードの場合Trueを返す。  
 
